@@ -1,0 +1,252 @@
+```html
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פירות המושב | חנות פירות מובחרים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <span class="text-3xl font-black text-green-600">פירות המושב</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-reverse space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-green-600 font-medium transition">דף הבית</a>
+                    <a href="#products" class="text-gray-700 hover:text-green-600 font-medium transition">הפירות שלנו</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-600 font-medium transition">עלינו</a>
+                    <a href="#contact" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition">הזמן עכשיו</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-4 shadow-lg">
+            <a href="#" class="block text-gray-700 font-medium">דף הבית</a>
+            <a href="#products" class="block text-gray-700 font-medium">הפירות שלנו</a>
+            <a href="#about" class="block text-gray-700 font-medium">עלינו</a>
+            <a href="#contact" class="block text-green-600 font-bold">הזמן עכשיו</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient h-[600px] flex items-center justify-center text-center text-white px-4">
+        <div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 drop-shadow-lg">הטעם של הטבע, אצלכם בבית</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light">פירות פרימיום שנבחרו בקפידה מדי בוקר ישירות מהחקלאי לצלחת שלכם.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#products" class="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-xl text-lg font-bold transition transform hover:scale-105">לצפייה בקטלוג</a>
+                <a href="#about" class="bg-white/20 backdrop-blur-md hover:bg-white/30 text-white border border-white px-10 py-4 rounded-xl text-lg font-bold transition">הסיפור שלנו</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-center">
+            <div class="p-6">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🚜</div>
+                <h3 class="text-xl font-bold mb-2">ישירות מהשדה</h3>
+                <p class="text-gray-600">אנחנו עובדים עם מיטב החקלאים בישראל כדי להבטיח טריות מקסימלית.</p>
+            </div>
+            <div class="p-6">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🚚</div>
+                <h3 class="text-xl font-bold mb-2">משלוח מהיר</h3>
+                <p class="text-gray-600">מהיום להיום! משלוחים מצוננים עד פתח הבית לשמירה על הוויטמינים.</p>
+            </div>
+            <div class="p-6">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🌟</div>
+                <h3 class="text-xl font-bold mb-2">איכות ללא פשרות</h3>
+                <p class="text-gray-600">כל פרי עובר מיון ידני קפדני לפני האריזה. רק הכי טוב נכנס לסל.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-gray-900 mb-4">המבחר העונתי שלנו</h2>
+                <div class="h-1 w-24 bg-green-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg group hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512149177596-f817c7ef5d4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fruit" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-green-600 font-bold uppercase tracking-wider">מארז פרימיום</span>
+                        <h3 class="text-xl font-bold mt-1">סלסלת פירות מעוצבת</h3>
+                        <p class="text-gray-600 mt-2">מיקס פירות העונה שטופים וחתוכים להגשה מיידית.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-2xl font-black text-gray-900">₪180</span>
+                            <button class="bg-gray-900 text-white p-3 rounded-full hover:bg-green-600 transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg group hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Oranges" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-orange-600 font-bold uppercase tracking-wider">עסיסי במיוחד</span>
+                        <h3 class="text-xl font-bold mt-1">תפוזי דם ממגדל מקומי</h3>
+                        <p class="text-gray-600 mt-2">מתוקים, אדומים ומלאים בוויטמינים. קטיף בוקר.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-2xl font-black text-gray-900">₪15 / ק"ג</span>
+                            <button class="bg-gray-900 text-white p-3 rounded-full hover:bg-green-600 transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg group hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1528821128474-27f9e78e5d93?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pears" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-yellow-600 font-bold uppercase tracking-wider">אורגני</span>
+                        <h3 class="text-xl font-bold mt-1">אגסי נאשי יוקרתיים</h3>
+                        <p class="text-gray-600 mt-2">מרקם קריספי וטעם גן עדן. הייבוא המיוחד שלנו.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-2xl font-black text-gray-900">₪24 / ק"ג</span>
+                            <button class="bg-gray-900 text-white p-3 rounded-full hover:bg-green-600 transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg group hover:shadow-2xl transition duration-300">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Berries" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-red-600 font-bold uppercase tracking-wider">סופרפוד</span>
+                        <h3 class="text-xl font-bold mt-1">מארז פירות יער טריים</h3>
+                        <p class="text-gray-600 mt-2">פטל, אוכמניות ודובדבנים. הכי טרי שיש בארץ.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-2xl font-black text-gray-900">₪35 / יחידה</span>
+                            <button class="bg-gray-900 text-white p-3 rounded-full hover:bg-green-600 transition">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-black mb-6">הסיפור של פירות המושב</h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    כבר למעלה משלושה עשורים שאנחנו קמים לפני הזריחה כדי לבחור עבורכם את הפירות הכי טובים שיש לאדמה שלנו להציע. מה שהתחיל כדוכן קטן במושב, הפך למותג של איכות וטעם ללא פשרות.
+                </p>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    אנחנו מאמינים שפירות הם לא רק אוכל – הם אנרגיה, בריאות ושמחת חיים. לכן אנחנו לא מתפשרים על רמת הסוכר, הצבע והמרקם של כל פרי שיוצא מאצלנו.
+                </p>
+                <div class="flex gap-4">
+                    <div class="text-center bg-gray-50 p-4 rounded-xl flex-1">
+                        <div class="text-3xl font-black text-green-600">30+</div>
+                        <div class="text-sm text-gray-500 font-bold">שנות ניסיון</div>
+                    </div>
+                    <div class="text-center bg-gray-50 p-4 rounded-xl flex-1">
+                        <div class="text-3xl font-black text-green-600">200+</div>
+                        <div class="text-sm text-gray-500 font-bold">חקלאים מקומיים</div>
+                    </div>
+                    <div class="text-center bg-gray-50 p-4 rounded-xl flex-1">
+                        <div class="text-3xl font-black text-green-600">10k+</div>
+                        <div class="text-sm text-gray-500 font-bold">לקוחות מרוצים</div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="absolute -top-4 -right-4 w-full h-full border-4 border-green-200 rounded-2xl z-0"></div>
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Market" class="rounded-2xl shadow-xl relative z-10 w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2">
+                <h3 class="text-3xl font-black text-green-500 mb-6">פירות המושב</h3>
+                <p class="text-gray-400 max-w-sm mb-6">מביאים לכם את הטוב ביותר מהטבע הישראלי. שירות אישי, טריות יומיומית ומשלוחים לכל חלקי הארץ.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">FB</a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">IG</a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">WA</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-6">ניווט מהיר</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition">דף הבית</a></li>
+                    <li><a href="#products" class="hover:text-white transition">הפירות שלנו</a></li>
+                    <li><a href="#about" class="hover:text-white transition">עלינו</a></li>
+                    <li><a href="#" class="hover:text-white transition">מדיניות משלוחים</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-6">צור קשר</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-center gap-3">
+                        <span>📍</span> מושב הדרים 42, ישראל
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>📞</span> 050-1234567
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span>✉️</span> info@fruit-shop.co.il
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+            <p>© 2023 פירות המושב. כל הזכויות שמורות. נבנה באהבה לפירות טריים.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+```
