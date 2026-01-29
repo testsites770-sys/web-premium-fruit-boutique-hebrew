@@ -1,0 +1,56 @@
+```css
+/* Custom Styles to augment Tailwind */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure font rendering is optimized */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* RTL Specific adjustments for margins/paddings if not covered by tailwind space-x-reverse */
+.rtl-margin-fix {
+    margin-left: 0;
+    margin-right: 1.5rem;
+}
+
+/* Hero text shadow for better readability */
+.drop-shadow-lg {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom scrollbar for a professional look */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #16a34a; /* Green-600 */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #15803d; /* Green-700 */
+}
+
+/* Hover effects for product cards */
+.group:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive fixes for RTL */
+@media (max-width: 768px) {
+    .hero-gradient {
+        background-attachment: scroll; /* Mobile doesn't always handle fixed backgrounds well */
+    }
+}
+```
